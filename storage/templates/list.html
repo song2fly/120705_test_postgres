@@ -1,0 +1,25 @@
+<html>
+<title>파일리스트</title>
+<script>
+	function download(id) {
+		document.f1.file_id = id;
+		document.f1.action = "http://127.0.0.1:8000/getter/";
+		document.f1.submit();
+	}
+</script>
+<body>
+<h1>파일리스트</h1>
+<table border="1" cellpadding="10">
+	{%for pic in pictures%}
+		<tr>
+			<td width="80" align="center">{{pic.file_id}}</td>
+			<td width="300"><a href="http://127.0.0.1:8000/preview/?file_id={{pic.file_id}}">{{pic.simple_name}}</a></td>
+			<td width="100" align="center"><a href="http://127.0.0.1:8000/getter/?file_id={{pic.file_id}}">Download</a></td>
+		</tr>
+	{%endfor%}
+</table>
+<br/><br/>
+<a href="http://127.0.0.1:8000/poster/">이미지등록</a>
+
+</body>
+</html>

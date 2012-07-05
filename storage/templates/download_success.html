@@ -1,0 +1,16 @@
+<html>
+<title>테스트 업로드 페이지</title>
+<script>
+	function go() {
+		location.href='http://127.0.0.1:8000/ls/'
+	}
+</script>
+<body>
+<form enctype="multipart/form-data" method="post" action="./">
+	{{ form.as_p }}
+	<input type="submit" value="저장" />
+	<input type="button" value="목록" onclick="javascript:go();"/>
+</form>
+</body>
+</html>
+
