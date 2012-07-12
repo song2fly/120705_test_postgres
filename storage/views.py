@@ -27,6 +27,8 @@ def main_page(request):
 #           '장고 Framework에 오신 것을 환영합니다.'
 #           )
 #    return HttpResponse (output)
+#   git test!!!!!!!!!!!!!
+
     return render_to_response('hello.html', None)
 
 
